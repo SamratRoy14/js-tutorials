@@ -38,6 +38,28 @@ d = "5";
 console.log(c == d); // true
 console.log(c === d); // false
 
+/***** Special cases in comparison operator
+
+//1. javascript automatically converts the strings to number while comparing
+
+console.log("2" > 1); // true
+console.log("02" > 1); // true
+
+//2. while comparing null it converts to 0 in comparison operators(> < >= <=)
+//   and stay null in equality operator(==) 
+
+console.log(null > 0); // 0 > 0 => false
+console.log(null == 0); // null == 0 => false
+console.log(null >= 0); // 0 >= 0 => true
+
+//3. There is no conversion in undefined variables
+
+console.log(undefined == 0); // false
+console.log(undefined > 0); // false
+console.log(undefined < 0); // false
+
+******/
+
 /*
     5.Logical Operator
     && , || , !
