@@ -45,7 +45,7 @@ console.log(c === d); // false
 console.log("2" > 1); // true
 console.log("02" > 1); // true
 
-//2. while comparing null it converts to 0 in comparison operators(> < >= <=)
+//2. while comparing null js converts to 0 in comparison operators(> < >= <=)
 //   and stay null in equality operator(==) 
 
 console.log(null > 0); // 0 > 0 => false
