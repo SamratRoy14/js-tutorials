@@ -82,7 +82,7 @@ console.log(newNums);
 
 // callbackFunc has 2 parameters prev/result and current.prev refers to first element and stores the result. current refers to second element in the array and 
 // traverse the array and compare with prev
-
+// It also has initialValue which denotes the value of prev in the start 
 
 // Find the sum in the array
 
@@ -94,18 +94,45 @@ let addition = items.reduce((prev, curr) => {
 
 console.log("Sum = ", addition);
 
+// const myTotal = items.reduce( (prev, curr) => prev+curr, 0) // another way to write it here 0 denotes initial value
+
+
+
 // Find maximum in an array
 
 let ar = [2, 4, 8, 5, 1, 4];
 
 let max = ar.reduce((prev, curr) => {
     return prev < curr ? curr : prev;
-});
+}, 0);
 
 console.log("Maximum = ", max);
 
+// reduce() on array of objects
+//Q> Find the total cart price 
 
+const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
 
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+console.log(`Total price to pay ${priceToPay}`);
 
 
 
